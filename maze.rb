@@ -67,7 +67,7 @@ class Maze
             return false
         else
             #prints out ancestry of answer to show steps used to get to it
-            answer.parentage.reverse.each do |step|
+            answer.parentage.reverse_each do |step|
                 puts step.content.to_s
             end
             puts answer.content.to_s
@@ -154,7 +154,6 @@ class Maze
 
     def to_s
         str = ""
-        i = 0
         @maze.each do |row|
             str += row.to_s + "\n"
         end
